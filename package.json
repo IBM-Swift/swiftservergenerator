@@ -1,0 +1,29 @@
+{
+  "name": "swiftservergenerator",
+  "version": "0.0.1",
+  "description": "Single bundle of the yeoman command line and the swiftserver generator",
+  "bin": { "swiftservergenerator": "./bin/cli.js" },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IBM-Swift/swiftservergenerator.git"
+  },
+  "keywords": [
+    "swift",
+    "kitura",
+    "swiftserver",
+    "generator"
+  ],
+  "dependencies": {
+    "generator-swiftserver": "git+https://github.com/IBM-Swift/generator-swiftserver.git",
+    "yo": "^1.8.5"
+  },
+  "author": "tunniclm",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/IBM-Swift/swiftservergenerator/issues"
+  },
+  "homepage": "https://github.com/IBM-Swift/swiftservergenerator#readme"
+}
