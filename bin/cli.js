@@ -52,6 +52,7 @@ var modulesDir = path.join(__dirname, '..', 'node_modules'); // TODO: Will this 
 // var modulesDir = path.dirname(path.dirname(require.resolve('yo/package.json')));
 // END
 var yoCommand = path.join(modulesDir, '.bin', 'yo');
+process.env['RUN_BY_COMMAND'] = 'swiftservergenerator';
 var options = { cwd: process.cwd(), env: process.env, detached: false, stdio: 'inherit' };
 
 var child = require('child_process').spawn(yoCommand, args, options);
