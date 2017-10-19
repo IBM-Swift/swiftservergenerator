@@ -4,7 +4,7 @@
   "description": "Single bundle of the yeoman command line and the swiftserver generator",
   "bin": { "swiftservergenerator": "./bin/cli.js" },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./test.sh"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "generator"
   ],
   "dependencies": {
-    "generator-swiftserver": "git+https://github.com/IBM-Swift/generator-swiftserver.git",
+    "generator-swiftserver": "^3.0.0",
     "yo": "^1.8.5"
   },
   "author": "tunniclm",
