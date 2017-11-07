@@ -17,7 +17,7 @@
     "generator"
   ],
   "dependencies": {
-    "generator-swiftserver": "^3.0.0",
+    "generator-swiftserver": "^4.0.0",
     "yo": "^1.8.5"
   },
   "author": "tunniclm",
