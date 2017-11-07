@@ -56,3 +56,6 @@ process.env['RUN_BY_COMMAND'] = 'swiftservergenerator';
 var options = { cwd: process.cwd(), env: process.env, detached: false, stdio: 'inherit' };
 
 var child = require('child_process').spawn(yoCommand, args, options);
+child.on('close' , (code) => {
+  process.exit(code);
+});

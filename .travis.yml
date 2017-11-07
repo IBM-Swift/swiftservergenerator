@@ -1,0 +1,16 @@
+language: node_js
+sudo: required
+branches:
+  only:
+  - master
+  - develop
+  - "/^issue.*$/"
+  - /^greenkeeper/.*$/
+node_js:
+- '4'
+- '6'
+- '8'
+os:
+- linux
+- osx
+osx_image: xcode9
