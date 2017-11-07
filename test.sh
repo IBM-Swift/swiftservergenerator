@@ -28,7 +28,7 @@ echo "Installation complete"
 cd "$TESTDIR"
 
 echo "Testing generation of default crud app"
-swiftservergenerator --app --spec '{ "appType": "crud", "appName":"test"}'
+swiftservergenerator --app --skip-build --spec '{ "appType": "crud", "appName":"test"}'
 if [ "$?" != "0" ];then
   echo "Failed"
   rm -rf "$TESTDIR"
@@ -38,7 +38,7 @@ echo "Cleaning up generated project"
 rm -rf swiftserver
 
 echo "Testing generation of default scaffold app"
-swiftservergenerator --app --spec '{ "appType": "scaffold", "appName":"test"}'
+swiftservergenerator --app --skip-build --spec '{ "appType": "scaffold", "appName":"test"}'
 if [ "$?" != "0" ];then
   echo "Failed"
   rm -rf "$TESTDIR"
