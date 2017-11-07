@@ -1,5 +1,8 @@
 #!/bin/bash
 
+if [ -z "$TMPDIR" ]; then
+  TMPDIR=/tmp
+fi
 TESTDIR="$TMPDIR/swiftservergenerator-test"
 
 echo "Cleaning any prior test directory $TESTDIR"
@@ -7,12 +10,12 @@ rm -rf "$TESTDIR"
 
 echo "Creating test directory $TESTDIR"
 mkdir -p "$TESTDIR"
-export PATH=$TESTDIR/bin:$PATH
+PATH=$TESTDIR/bin:$PATH
 
 echo "Installing swiftservergenerator"
 echo "- Creating package"
 npm pack
-export PKG=`ls swiftservergenerator-*.tgz | tail -1`
+PKG=`ls swiftservergenerator-*.tgz | tail -1`
 echo "- Installing package ($PKG) to test directory as global module"
 npm install -g --prefix="$TESTDIR" "$PKG"
 if [ "$?" != "0" ];then
